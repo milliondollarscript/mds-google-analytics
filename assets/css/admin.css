@@ -1,0 +1,155 @@
+.mds-analytics-tabs {
+    margin: 0 0 16px;
+}
+
+.mds-analytics-status-list {
+    display: grid;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.mds-analytics-status-list > div {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mds-analytics-status {
+    border-radius: 999px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    min-width: 62px;
+    padding: 3px 9px;
+    text-align: center;
+}
+
+.mds-analytics-status-active {
+    background: #ecfdf5;
+    color: #065f46;
+}
+
+.mds-analytics-status-inactive {
+    background: #f1f5f9;
+    color: #334155;
+}
+
+.mds-analytics-status-actions,
+.mds-ga-quick-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0;
+}
+
+.mds-analytics-status-actions .button,
+.mds-ga-quick-links .button {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0;
+    min-height: 36px;
+}
+
+.mds-analytics-test-result:empty {
+    display: none;
+}
+
+.mds-analytics-notice {
+    border: 1px solid;
+    border-radius: 6px;
+    margin: 12px 0;
+    padding: 10px 12px;
+}
+
+.mds-analytics-notice-neutral {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #334155;
+}
+
+.mds-analytics-notice-success {
+    background: #ecfdf5;
+    border-color: #6ee7b7;
+    color: #065f46;
+}
+
+.mds-analytics-notice-error {
+    background: #fef2f2;
+    border-color: #fca5a5;
+    color: #991b1b;
+}
+
+.mds-ga-info h4 {
+    margin: 15px 0 5px;
+}
+
+.mds-ga-info ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.mds-ga-info li {
+    color: #475569;
+    font-size: 12px;
+}
+
+body.mds3-admin-theme-dark .mds-analytics-status-active,
+body.mds3-admin-theme-dark .mds-analytics-notice-success {
+    background: #052e26;
+    border-color: #34d399;
+    color: #d1fae5;
+}
+
+body.mds3-admin-theme-dark .mds-analytics-status-inactive,
+body.mds3-admin-theme-dark .mds-analytics-notice-neutral {
+    background: #1e293b;
+    border-color: #64748b;
+    color: #f1f5f9;
+}
+
+body.mds3-admin-theme-dark .mds-analytics-notice-error {
+    background: #450a0a;
+    border-color: #f87171;
+    color: #fee2e2;
+}
+
+body.mds3-admin-theme-dark .mds-ga-info li {
+    color: #cbd5e1;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.mds3-admin-theme-system .mds-analytics-status-active,
+    body.mds3-admin-theme-system .mds-analytics-notice-success {
+        background: #052e26;
+        border-color: #34d399;
+        color: #d1fae5;
+    }
+
+    body.mds3-admin-theme-system .mds-analytics-status-inactive,
+    body.mds3-admin-theme-system .mds-analytics-notice-neutral {
+        background: #1e293b;
+        border-color: #64748b;
+        color: #f1f5f9;
+    }
+
+    body.mds3-admin-theme-system .mds-analytics-notice-error {
+        background: #450a0a;
+        border-color: #f87171;
+        color: #fee2e2;
+    }
+
+    body.mds3-admin-theme-system .mds-ga-info li {
+        color: #cbd5e1;
+    }
+}
+
+@media (max-width: 600px) {
+    .mds-analytics-status-actions .button,
+    .mds-ga-quick-links .button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "package": "mds-google-analytics",
+  "type": "extension",
+  "version": "1.1.1",
+  "channel": "main",
+  "title": "Analytics",
+  "docs": [
+    {
+      "id": "usage",
+      "title": "Analytics",
+      "file": "USAGE.md",
+      "audience": ["admin", "support", "developer", "legal-review"],
+      "topics": ["analytics", "settings", "privacy", "legal", "extensions"]
+    }
+  ]
+}
