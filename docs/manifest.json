@@ -2,7 +2,7 @@
   "schema": 1,
   "package": "mds-google-analytics",
   "type": "extension",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "channel": "main",
   "title": "Analytics",
   "docs": [

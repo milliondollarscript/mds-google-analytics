@@ -3,7 +3,7 @@
  * Plugin Name: Million Dollar Script - Analytics
  * Plugin URI: https://milliondollarscript.com/extensions/analytics
  * Description: Analytics integration for Million Dollar Script with Google Analytics 4, custom tracking snippets, event tracking, and an admin dashboard widget.
- * Version: 1.1.2
+ * Version: 1.1.3
  * Author: Million Dollar Script
  * Author URI: https://milliondollarscript.com
  * License: GPL v2 or later
@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define constants
-define('MDS_GA_VERSION', '1.1.2');
+define('MDS_GA_VERSION', '1.1.3');
 define('MDS_GA_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('MDS_GA_PLUGIN_URL', plugin_dir_url(__FILE__));
 
