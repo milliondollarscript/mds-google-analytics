@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define constants
-define('MDS_GA_VERSION', '1.1.1');
+define('MDS_GA_VERSION', '1.1.2');
 define('MDS_GA_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('MDS_GA_PLUGIN_URL', plugin_dir_url(__FILE__));
 
