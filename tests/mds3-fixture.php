@@ -67,8 +67,19 @@ $call_private = static function ($object, $method, array $arguments = []) {
 };
 
 try {
-    if ('1.1.1' !== MDS_GA_VERSION) {
-        throw new RuntimeException('Analytics version metadata is stale.');
+    // The invariant is that the package describes itself consistently, not that it names
+    // one particular number. A pinned literal breaks on every release, and it says
+    // nothing about the failure it is supposed to catch - a bump that updates the plugin
+    // header and leaves the constant behind.
+    $header_source = (string) file_get_contents(dirname(__DIR__) . '/mds-google-analytics.php');
+    if (!preg_match('/^[ \t]*\*[ \t]*Version:[ \t]*(\S+)/m', $header_source, $header_version)) {
+        throw new RuntimeException('Analytics plugin header version is unreadable.');
+    }
+    if ($header_version[1] !== MDS_GA_VERSION) {
+        throw new RuntimeException(
+            'Analytics version metadata is stale: the plugin header says ' . $header_version[1]
+            . ' and MDS_GA_VERSION says ' . MDS_GA_VERSION . '.'
+        );
     }
 
     $analytics->add_admin_menu();

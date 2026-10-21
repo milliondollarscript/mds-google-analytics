@@ -34,7 +34,16 @@ class MDS_Google_Analytics_Tests extends WP_UnitTestCase {
     }
 
     public function test_extension_metadata_and_hooks() {
-        $this->assertSame('1.1.1', MDS_GA_VERSION);
+        // Compare the constant to the plugin header rather than to a literal: a literal
+        // breaks every release and cannot catch the defect that matters, a bump that
+        // changes the header and leaves MDS_GA_VERSION (used by the assets and the
+        // self-check payload) on the previous number.
+        $header_src = (string) file_get_contents(dirname(__DIR__) . '/mds-google-analytics.php');
+        $this->assertSame(
+            preg_match('/^[ \t]*\*[ \t]*Version:[ \t]*(\S+)/m', $header_src, $m) ? $m[1] : false,
+            MDS_GA_VERSION,
+            'plugin header and version constant disagree'
+        );
         $this->assertNotFalse(has_action('init', [$this->extension, 'init']));
         $this->assertNotFalse(has_action('admin_menu', [$this->extension, 'add_admin_menu']));
         $this->assertNotFalse(has_action('wp_enqueue_scripts', [$this->extension, 'enqueue_tracking_assets']));
